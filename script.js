@@ -42,5 +42,5 @@ const blur = document.getElementById('blur-bg');
 function onStart() {
     document.getElementById('audio').play();
     startbtn.style.display = 'none';
-    blur.style.filter = 'blur(0px)';
+    blur.style.filter = 'blur(0px)'; 
 }
