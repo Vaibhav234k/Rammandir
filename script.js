@@ -1,11 +1,15 @@
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+var Name = urlParams.get("name");
+var n = urlParams.get("n");
+const startbtn = document.getElementById('start-btn');
+const blur = document.getElementById('blur-bg');
+
 function renderName() {
-    
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    var Name = urlParams.get("name");
-    var n = urlParams.get("n");
     if (n == 1) {
         document.getElementById("btn").innerHTML = "Share";
+        startbtn.style.display = 'none';
+        blur.style.filter = 'blur(0px)';
     }
     if (Name == null) {
         document.getElementById("name").innerHTML = "आपका नाम यहां";
@@ -16,15 +20,12 @@ function renderName() {
 }
 
 function onCreate() {
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    var n = urlParams.get("n");
     if (n == 1) {
         var url = window.location.href;
         url = url.substring(0, url.length - 4);
         console.log(url);
         window.open(
-            "whatsapp://send?text=राम मंदिर बनने की खुशी में ये मैसेज 10 लोगो को शेयर कीजिये%0A" + url, '_blank'
+            "whatsapp://send?text=राम मंदिर बनने की खुशी में ये मैसेज 10 लोगो को शेयर कीजिये%0A" + encodeURIComponent(url), '_blank'
         );
     } else {
         const name = document.getElementById("input-name").value;
@@ -37,10 +38,9 @@ function onCreate() {
         window.open('https://vaibhav234k.github.io/Rammandir/index.html?name=' + name + "&n=1", '_self');
     }
 }
-const startbtn= document.getElementById('start-btn');
-const blur = document.getElementById('blur-bg');
+
 function onStart() {
     document.getElementById('audio').play();
     startbtn.style.display = 'none';
-    blur.style.filter = 'blur(0px)'; 
+    blur.style.filter = 'blur(0px)';
 }
