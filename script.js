@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(queryString);
 var Name = urlParams.get("name");
 var n = urlParams.get("n");
 const startbtn = document.getElementById('start-btn');
-const blur = document.getElementById('blur-bg');
+const blur = document.getElementById('blur-bg'); 
 
 function renderName() {
     if (n == 1) {
