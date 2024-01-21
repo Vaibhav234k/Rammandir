@@ -34,7 +34,7 @@ function onCreate() {
             document.getElementById("name").innerHTML = name;
         }
         console.log(name);
-        window.open('http://127.0.0.1:5500/index.html?name=' + name + "&n=1", '_self');
+        window.open('vaibhav234k.github.io/Rammandir/index.html?name=' + name + "&n=1", '_self');
     }
 }
 const startbtn= document.getElementById('start-btn');
