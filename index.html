@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
+  <title>Sanatani</title>
+  <style>
+    .btn,
+    .btn2 {
+      font-weight: bold;
+      padding: 12px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.9);
+      border-radius: 25px;
+      background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+      background-size: 600%;
+      -webkit-animation: anime 16s linear infinite;
+      animation: anime 16s linear infinite;
+    }
+
+    @-webkit-keyframes anime {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes anime {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .header {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      text-align: center;
+      color: #000;
+      background-image: -webkit-linear-gradient(92deg, #000000, #ff6969);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: hue 10s infinite linear;
+    }
+
+    @-webkit-keyframes hue {
+      from {
+        -webkit-filter: hue-rotate(0deg);
+      }
+
+      to {
+        -webkit-filter: hue-rotate(-360deg);
+      }
+    }
+    #blur-bg{
+      filter: blur(4px);
+    }
+  </style>
+</head>
+
+<body class="bg-orange-500" onload="renderName()">
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 btn text-5xl font-bold z-10 p-5" id="start-btn" onclick="onStart()">START</div>
+  <div id="blur-bg">
+    
+    <audio hidden loop id="audio">
+      <source src="song.mp3" type="audio/mp3">
+    </audio>
+    <div class="w-full h-20 border-2"></div>
+    <div class="w-full h-20 border-2"></div>
+    
+    <div class="flex justify-center items-center h-[100vh]">
+      
+      <div class="absolute">
+        <img src="paper.png" class="h-[85vh]" alt="paper.png">
+      </div>
+      
+      <div class="w-full lg:w-[26%] p-[2px] relative">
+        <div>
+          <h3 class="header font-bold text-xl px-2" id="name"></h3>
+          
+          <h1 class="header font-bold text-xl lg:text-3xl px-2.5 pt-3"><b>की ओर से राम मंदिर बनने की खुशी में आपको हार्दिक
+            शुभकामनाएं!</b></h1>
+          </div>
+          
+          <div class="flex items-center justify-center">
+            <img src="Untitled design.png" class="max-w-60 h-auto" alt="ram mandir">
+            <!-- <video src="Untitled design(5)(1).mp4" id="audio" class="max-w-60 h-auto" controls loop></video> -->
+          </div>
+          
+          <div class="px-2.5">
+            <h1 class="header font-bold text-sm lg:text-xl text-center px-3">"राम मंदिर बनने की खुशी में आपको हार्दिक शुभकामनाएं! यह समय हम सभी के लिए आनंद और शांति लेकर आये।"</h1>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center gap-2 mb-6 p-2.5">
+          <input type="text" id="input-name" placeholder="Enter your name"
+          class="bg-gray-50 border font-bold border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-[60%] p-2.5">
+          <button class="btn" id="btn" onclick="onCreate()">Create</button>
+        </div>
+        <div class="w-full h-20 border-2"></div>
+        <div class="w-full h-20 border-2"></div>
+        <div class="w-full h-20 border-2"></div>
+        <div class="w-full h-20 border-2"></div>
+      </div>
+        <script src="script.js" async defer></script>
+      </body>
+      
+      </html>
